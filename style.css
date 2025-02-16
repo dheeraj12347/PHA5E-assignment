@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #B0B0B0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+html, body{
+    height: 100vh;
+    width: 100vw;
+    /* background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #262626); */
+}
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111;
+    --hover-color: linear-gradient(90deg, #ff7847, #ffaf61);
+}
+
+[data-theme="dark"] {
+    --bg-color: #111;
+    --text-color: #ffffff;
+    --hover-color: linear-gradient(90deg, #ffaf61, #ff7847);
+}
+
+.phase{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* color: #B0B0B0; */
+    display: flex;
+    font-size: 10rem;
+    z-index: 1001;
+    font-weight: 900;
+}
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    top: 10px;
+    z-index: 1000;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    position: relative;
+    left: 25rem;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.items {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+    background: linear-gradient(90deg, #ff7847, #ffaf61); /* Gradient-based color */
+
+    /* Ensuring text gradient works in supported browsers */
+    -webkit-background-clip: text; /* Chrome, Safari */
+    background-clip: text; /* Standard property */
+    
+    -webkit-text-fill-color: transparent; /* Works in WebKit browsers */
+}
+
+.items:hover {
+    background: linear-gradient(90deg, #ffaf61, #ff7847); /* Slight variation */
+    
+    /* Reapply for hover effect */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+}
+.nav-link:hover {
+    background: var(--hover-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(1.2);
+}
+
+.theme-toggle {
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .section {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .items {
+        font-size: 16px;
+    }
+}
+.center{
+    position: absolute;
+    margin-top: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7.5rem;
+    font-weight: 900;
+    line-height: 6rem;
+    text-align: center;
+}
+
+
+.image-container {
+    position: absolute;
+    width: 18rem; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    height: 12rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    cursor: pointer;
+  }
+
+
+  
+  
+
